@@ -150,6 +150,30 @@ logging_bucket_url = "s3://my-unique-logging-bucket-abc123"
 
 ---
 
+## Usage as a Module
+
+Reference this repository as a Terraform module in your own configurations:
+
+```hcl
+module "s3_buckets" {
+  source = "github.com/marcuwynu23/terraform-aws-s3?ref=main"
+}
+```
+
+Then use the outputs in your configuration:
+
+```hcl
+# Example: reference the bucket names in another resource
+resource "aws_s3_bucket_policy" "source_policy" {
+  bucket = module.s3_buckets.source_bucket_name
+  # ...
+}
+```
+
+All outputs documented below are available when using this as a module.
+
+---
+
 ## Permissions & Notes
 
 - Both buckets are created with `private` ACL
