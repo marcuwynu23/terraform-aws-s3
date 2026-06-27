@@ -1,4 +1,4 @@
 # Provider Configuration
 provider "aws" {
-  region = "ap-southeast-1"  # Specify the AWS region
+  region = "ap-southeast-1" # Specify the AWS region
 }
