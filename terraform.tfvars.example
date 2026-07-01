@@ -1,0 +1,4 @@
+source_bucket_prefix  = "my-unique-bucket-name-"
+logging_bucket_prefix = "my-unique-logging-bucket-"
+bucket_acl            = "private"
+log_target_prefix     = "log/"
